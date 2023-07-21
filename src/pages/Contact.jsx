@@ -1,9 +1,11 @@
 import React from "react";
+import UseMediaQuery from "../components/Mediaquery/UseMediaQuery";
 import "../styles/Contact.scss";
 import headerImg from "../assets/images/contactus/group-27.svg";
 import contentImg from "../assets/images/contactus/group-24.svg";
 
 const Contact = () => {
+	let isPageMobile = UseMediaQuery("(max-width: 480px)");
 	return (
 		<div className="contactus_container">
 			<div className="contactus_wrapper">
@@ -14,7 +16,7 @@ const Contact = () => {
 						Reach out to us for enrollment inquiries or to learn more about our
 						programs.
 					</p>
-					<img src={headerImg} alt="" />
+					{isPageMobile ? null : <img src={headerImg} alt="" />}
 				</header>
 
 				<body>

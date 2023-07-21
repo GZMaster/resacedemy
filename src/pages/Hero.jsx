@@ -1,9 +1,12 @@
 import React from "react";
+import UseMediaQuery from "../components/Mediaquery/UseMediaQuery";
 import "../styles/Hero.scss";
 import mini_shapes from "../assets/images/hero/mini-floating-shapes.svg";
 import heroimages from "../assets/images/hero/hero-images.svg";
+import mobileheroimage from "../assets/images/hero/hero-images-mobile.png";
 
 const Hero = () => {
+	let isPageWide = UseMediaQuery("(min-width: 480px)");
 	return (
 		<section id="hero" className="hero_container">
 			<div className="hero_wrapper">
@@ -22,11 +25,17 @@ const Hero = () => {
 				</div>
 
 				<div className="hero_bacground_images">
-					<img src={mini_shapes} alt="mini floating shapes" />
+					{isPageWide ? (
+						<img src={mini_shapes} alt="mini floating shapes" />
+					) : null}
 				</div>
 
 				<div className="hero_background_shapes">
-					<img src={heroimages} alt="hero images" />
+					{isPageWide ? (
+						<img src={heroimages} alt="hero images" />
+					) : (
+						<img src={mobileheroimage} alt="" />
+					)}
 				</div>
 			</div>
 		</section>

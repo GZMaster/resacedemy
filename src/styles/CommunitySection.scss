@@ -6,6 +6,10 @@
 	&_container {
 		height: 100vh;
 		background-color: $White;
+
+		@include mobile {
+			height: auto;
+		}
 	}
 
 	&_wrapper {
@@ -16,6 +20,11 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
+
+		@include mobile {
+			margin: 0px 1.4rem;
+			gap: 4rem;
+		}
 	}
 
 	&_content {
@@ -31,6 +40,12 @@
 		background: $Card-bg;
 		flex-shrink: 0;
 		z-index: 1;
+
+		@include mobile {
+			width: 23.3125rem;
+			height: 27.1875rem;
+			flex-shrink: 0;
+		}
 
 		&_title {
 			display: flex;
@@ -54,6 +69,10 @@
 				font-weight: 600;
 				line-height: normal;
 				text-align: center;
+
+				@include mobile {
+					width: 20.0625rem;
+				}
 			}
 		}
 
@@ -66,6 +85,10 @@
 			font-style: normal;
 			font-weight: 400;
 			line-height: 170%; /* 1.59375rem */
+
+			@include mobile {
+				width: 20.0625rem;
+			}
 		}
 
 		> button {

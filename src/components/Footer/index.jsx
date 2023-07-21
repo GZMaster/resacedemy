@@ -1,11 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import UseMediaQuery from "../Mediaquery/UseMediaQuery";
 import "../../styles/Footer.scss";
 import footerimg from "../../assets/images/footer/group-20.svg";
+import mobilefooterimg from "../../assets/images/footer/group-14.png";
 import dot from "../../assets/images/footer/ellipse-6.png";
 
 const Footer = () => {
 	const navigate = useNavigate();
+	let isPageWide = UseMediaQuery("(min-width: 480px)");
 
 	return (
 		<section className="footer_container">
@@ -20,6 +23,8 @@ const Footer = () => {
 								process.
 							</p>
 							<button>Get in touch</button>
+
+							{isPageWide ? null : <img src={mobilefooterimg} alt="" />}
 						</div>
 						<div className="footer_left_footer">
 							<div className="footer_left_footer_links">
@@ -43,15 +48,17 @@ const Footer = () => {
 							</div>
 						</div>
 					</div>
-					<div className="footer_right">
-						<img src={footerimg} alt="" />
-					</div>
+					{isPageWide ? (
+						<div className="footer_right">
+							<img src={footerimg} alt="" />
+						</div>
+					) : null}
 				</header>
 
 				<footer>
 					<div className="footer_center">
 						<p>Copyright © 2023 RoseluyiAcademy. All rights reserved.</p>
-						<img src={dot} alt="" />
+						{isPageWide ? <img src={dot} alt="" /> : null}
 						<h3>
 							Designed by <span>RetroDevelopers.</span>
 						</h3>

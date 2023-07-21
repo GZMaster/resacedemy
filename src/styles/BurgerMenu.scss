@@ -1,50 +1,77 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "./_breakpoints.scss";
+@import "./_fonts.scss";
 @import "./_colors.scss";
+
 .hamburger_button {
-  z-index: 10;
-  margin-left: 10px;
+	z-index: 10;
+	margin-left: 10px;
+	stroke-width: 3px;
+	stroke: #000;
+	color: $Black;
 }
 
 .panel {
-  background-color: white;
-  transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
-  position: fixed;
-  z-index: -1;
-  right: -100%;
-  top: 48px;
-  height: fit-content;
-  visibility: hidden;
-  opacity: 0;
-  display: flex;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+	background-color: white;
+	transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+	position: fixed;
+	z-index: -1;
+	right: -100%;
+	top: 48px;
+	height: fit-content;
+	visibility: hidden;
+	opacity: 0;
+	display: flex;
+	box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
 
-  &.open {
-    visibility: visible;
-    width: 100%;
-    right: 0;
-    opacity: 1;
-  }
+	&.open {
+		visibility: visible;
+		width: 100%;
+		right: 0;
+		opacity: 1;
+	}
 }
 
 .panel ul {
-  width: 100%;
-  padding: 1rem;
-  padding-bottom: 2rem;
+	width: 100%;
+	padding: 1rem;
+	padding-bottom: 2rem;
+	flex-shrink: 0;
+	background: $Hambuger-bg;
 
-  li {
-    list-style: none;
-    font-size: 1.4rem;
-    padding: 5px;
-    text-align: center;
+	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		list-style: none;
+		font-size: 1.4rem;
+		padding: 5px;
+		text-align: center;
 
-    & + li {
-      margin-top: 1rem;
-    }
+		& + li {
+			margin-top: 1rem;
+		}
 
-    a {
-      text-decoration: none;
-      color: #e99815;
-      cursor: pointer;
-    }
-  }
+		> button {
+			border: none;
+			background-color: transparent;
+			color: #fff;
+			font-family: Poppins;
+			font-size: 0.9375rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+
+		> .contact_button {
+			display: flex;
+			padding: 0.625rem 1.125rem;
+			justify-content: center;
+			align-items: center;
+			gap: 0.625rem;
+			border-radius: 1.875rem;
+			border: 1.5px solid #ffd726;
+			background-color: transparent;
+		}
+	}
 }

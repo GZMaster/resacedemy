@@ -17,6 +17,11 @@
 		align-items: center;
 		gap: 4.5rem;
 
+		@include mobile {
+			margin: 0 1.2rem;
+			padding: 0rem 0;
+		}
+
 		> header {
 			display: flex;
 			flex-direction: row;
@@ -24,6 +29,11 @@
 			align-items: center;
 			gap: 11.25rem;
 			width: 100%;
+
+			@include mobile {
+				gap: 2.88rem;
+				align-items: flex-start;
+			}
 
 			> .footer_left {
 				display: flex;
@@ -37,6 +47,13 @@
 					flex-direction: column;
 					align-items: flex-start;
 					gap: 1.0625rem;
+
+					@include mobile {
+						display: inline-flex;
+						flex-direction: column;
+						align-items: flex-start;
+						gap: 1.25rem;
+					}
 
 					> h1 {
 						width: 17.6875rem;
@@ -55,6 +72,10 @@
 						font-size: 0.9375rem;
 						font-weight: 400;
 						line-height: 170%;
+
+						@include mobile {
+							width: 19.0625rem;
+						}
 					}
 
 					> button {
@@ -79,11 +100,27 @@
 					align-items: flex-start;
 					gap: 2rem;
 
+					@include mobile {
+						display: flex;
+						width: 21.5625rem;
+						align-items: flex-start;
+						align-content: flex-start;
+						gap: 4.25rem 3.625rem;
+						flex-wrap: wrap;
+					}
+
 					> .footer_left_footer_links {
 						display: flex;
 						flex-direction: column;
 						align-items: flex-start;
 						gap: 1rem;
+
+						@include mobile {
+							display: flex;
+							flex-direction: column;
+							align-items: flex-start;
+							gap: 1rem;
+						}
 
 						> h3 {
 							color: $Heading-color;
@@ -115,6 +152,13 @@
 						align-items: flex-start;
 						gap: 1rem;
 
+						@include mobile {
+							display: flex;
+							flex-direction: column;
+							align-items: flex-start;
+							gap: 1rem;
+						}
+
 						> h3 {
 							color: $Heading-color;
 							font-family: $Montserrat;
@@ -140,6 +184,13 @@
 						flex-direction: column;
 						align-items: flex-start;
 						gap: 1rem;
+
+						@include mobile {
+							display: flex;
+							flex-direction: column;
+							align-items: flex-start;
+							gap: 1rem;
+						}
 
 						> h3 {
 							color: $Heading-color;
@@ -170,6 +221,12 @@
 				align-items: center;
 				width: 28.5rem;
 				height: 100%;
+
+				@include mobile {
+					width: 17.95438rem;
+					height: 16.8125rem;
+					flex-shrink: 0;
+				}
 			}
 		}
 
@@ -183,10 +240,25 @@
 			border-top: 1px solid rgba(0, 0, 0, 0.15);
 			background: #fcfcfc;
 
+			@include mobile {
+				display: inline-flex;
+				padding: 0.875rem 2.625rem 0.875rem 2.6875rem;
+				justify-content: center;
+				align-items: center;
+				margin: 0;
+			}
+
 			> .footer_center {
 				display: flex;
 				align-items: center;
-				gap: 1.25rem;
+
+				@include mobile {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					gap: 0.625rem;
+				}
 
 				> p {
 					color: rgba(0, 0, 0, 0.39);
@@ -195,6 +267,11 @@
 					font-style: normal;
 					font-weight: 400;
 					line-height: 140%; /* 1.225rem */
+
+					@include mobile {
+						font-size: 0.75rem;
+						margin: 0;
+					}
 				}
 
 				> img {
@@ -218,6 +295,10 @@
 						font-style: normal;
 						font-weight: 700;
 						line-height: 140%;
+					}
+
+					@include mobile {
+						margin: 0;
 					}
 				}
 			}

@@ -6,7 +6,7 @@
 	position: fixed;
 	display: flex;
 	z-index: 5;
-	top: 0%;
+	top: 0;
 	right: 0;
 	left: 0;
 	justify-content: space-between;
@@ -15,16 +15,10 @@
 	background-color: transparent;
 	transition: all 0.3s ease-in-out;
 	color: white;
-}
-.colorChange {
-	box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
-	background-color: white;
-	color: black;
-}
 
-.nav__header {
-	display: flex;
-	align-items: center;
+	@include mobile {
+		padding: 10px 1%;
+	}
 }
 
 .links__content {

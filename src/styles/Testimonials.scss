@@ -16,6 +16,12 @@
 		justify-content: center;
 		align-items: flex-start;
 		gap: 4.5rem;
+
+		@include mobile {
+			margin: 0px 0.4rem;
+			gap: 4rem;
+			align-items: center;
+		}
 	}
 
 	&_header {
@@ -24,6 +30,10 @@
 		justify-content: center;
 		align-items: flex-start;
 		gap: 0.4rem;
+
+		@include mobile {
+			padding: 0rem;
+		}
 
 		> h3 {
 			color: #333;
@@ -42,6 +52,12 @@
 			font-style: normal;
 			font-weight: 600;
 			line-height: normal;
+
+			@include mobile {
+				width: 20rem;
+				margin: 0;
+				font-size: 1.5rem;
+			}
 		}
 	}
 
@@ -51,5 +67,13 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		gap: 3.75rem;
+
+		@include mobile {
+			flex-direction: column;
+			width: 20rem;
+			gap: 4rem;
+			justify-content: center;
+			align-items: stretch;
+		}
 	}
 }

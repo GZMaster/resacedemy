@@ -1,81 +1,47 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
 import { Turn as Hamburger } from "hamburger-react";
 import "../../styles/BurgerMenu.scss";
 
 const BurgerMenu = () => {
-  const [isOpen, setOpen] = useState(false);
-  const navigate = useNavigate();
-  const handleClick = () => {
-    setOpen(false);
-    navigate("/");
-  };
-  return (
-    <div>
-      <Hamburger
-        className="hamburger_button"
-        toggled={isOpen}
-        toggle={setOpen}
-        direction="right"
-        duration={0.8}
-        color="#e99815"
-      />
+	const [isOpen, setOpen] = useState(false);
+	const navigate = useNavigate();
 
-      <div className={`panel ${isOpen ? "open" : "close"}`}>
-        <ul>
-          <li>
-            <Link
-              activeclass="active"
-              smooth={true}
-              spy={true}
-              to="home"
-              offset={-45}
-              onClick={handleClick}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeclass="active"
-              smooth={true}
-              spy={true}
-              to="about"
-              offset={-45}
-              onClick={handleClick}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeclass="active"
-              smooth={true}
-              spy={true}
-              to="services"
-              offset={-45}
-              onClick={handleClick}
-            >
-              Services
-            </Link>
-          </li>{" "}
-          <li>
-            <Link
-              activeclass="active"
-              smooth={true}
-              spy={true}
-              offset={-45}
-              to="contact"
-              onClick={handleClick}
-            >
-              Contact Us
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
+	return (
+		<div>
+			<Hamburger
+				className="hamburger_button"
+				toggled={isOpen}
+				toggle={setOpen}
+				direction="right"
+				duration={0.8}
+				color="#000"
+				style={{ height: "1.5rem", width: "1.5rem" }}
+			/>
+
+			<div className={`panel ${isOpen ? "open" : "close"}`}>
+				<ul>
+					<li>
+						<button onClick={() => navigate("/about")}>About Us</button>
+					</li>
+					<li>
+						<button onClick={() => navigate("/enrollment")}>Enrollment</button>
+					</li>
+					<li>
+						<button>Youtube</button>
+					</li>
+					<li>
+						<button
+							className="contact_button"
+							onClick={() => navigate("/contact")}
+						>
+							Contact Us
+						</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+	);
 };
 
 export default BurgerMenu;
