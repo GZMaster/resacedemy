@@ -48,11 +48,11 @@ const Footer = () => {
 							</div>
 						</div>
 					</div>
-					{isPageWide ? (
+					{isPageWide ? null : (
 						<div className="footer_right">
 							<img src={footerimg} alt="" />
 						</div>
-					) : null}
+					)}
 				</header>
 
 				<footer>
