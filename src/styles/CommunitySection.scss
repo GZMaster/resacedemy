@@ -42,8 +42,8 @@
 		z-index: 1;
 
 		@include mobile {
-			width: 23.3125rem;
-			height: 27.1875rem;
+			width: auto;
+			height: auto;
 			flex-shrink: 0;
 		}
 

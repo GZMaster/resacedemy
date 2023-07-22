@@ -1,15 +1,27 @@
+@import './fonts';
+@import './breakpoints';
+
 div.faqpage {
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+        width: 100%;
+    }
     &__header {
         margin-top: 10rem;
         color: #333;
         text-align: center;
-        font-family: Montserrat;
+        font-family: $Montserrat;
         font-size: 1.875rem;
         font-style: normal;
         font-weight: 600;
         line-height: 150%; /* 2.8125rem */
+
+        @include mobile {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
     }
 
     &__body {
@@ -33,7 +45,12 @@ div.faqpage {
             &__question {
 
                 h1 {
-                    width: 25rem;
+                    width: 23rem;
+
+                    @include mobile {
+                        width: 15rem;
+                        line-height: 150%;
+                    }
                 }
 
                 img {
@@ -44,23 +61,43 @@ div.faqpage {
                 display: flex;
                 justify-content: space-between;
                 color: #333;
-                font-family: Poppins;
+                font-family: $Poppins;
                 font-size: 0.5125rem;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 170%; /* 1.9125rem */
+
+                @include mobile {
+                    font-size: .4rem;
+           
+                }
             
             }
 
             &__answer {
                 width: 25em;
                 color: #333;
-                font-family: Poppins;
+                font-family: $Poppins;
                 font-size: 1rem;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 170%; /* 1.7rem */
+
+                @include mobile {
+
+                    p {
+                        width: 15rem;
+                    }
+
+                }
             }
+        }
+
+        @include mobile {
+            width: 23.3125rem;
+            align-self: center;
+            margin-top: 0;
+
         }
     }
 

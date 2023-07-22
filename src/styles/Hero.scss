@@ -97,11 +97,6 @@
 			width: 78.125rem;
 			height: 16.49625rem;
 			margin: 0;
-
-			@include mobile {
-				width: 100vw;
-				margin: 0 0.4rem;
-			}
 		}
 	}
 
@@ -119,8 +114,8 @@
 			flex-shrink: 0;
 
 			@include mobile {
-				width: 24.96706rem;
-				height: 10.8125rem;
+				width: 20rem;
+				height: auto;
 			}
 		}
 	}

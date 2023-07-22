@@ -20,7 +20,14 @@ function Faq() {
 								<h1>{item.question}</h1>
 								<button
 									className="faqpage__body__item__question__button"
-									onClick={() => setOpenIndex(index)}
+									onClick={() => {
+										if (openIndex === index) {
+										  setOpenIndex(-1);
+										} else {
+										  setOpenIndex(index);
+										}
+									  }}
+										
 								>
 									<img
 										src={openIndex === index ? closebt : openbt}

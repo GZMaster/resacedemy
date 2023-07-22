@@ -75,11 +75,11 @@ const AboutPage = () => {
 					<h1 className="partners">Partners & Collaborators</h1>
 					<div className="about__body__partners__container">
 						<div className="about__body__partners__container__brand1">
-							<img src="/images/government.png" alt="" />
+							<img src="src/assets/images/shapes/government.png" alt="government" />
 							<h6>Edo State Government</h6>
 						</div>
 						<div className="about__body__partners__container__brand">
-							<img src="/images/hospital.png" alt="hospital" />
+							<img src="src/assets/images/shapes/hospital.png" alt="hospital" />
 							<h6>Federal Neuro Psychiatric Hospital</h6>
 						</div>
 					</div>

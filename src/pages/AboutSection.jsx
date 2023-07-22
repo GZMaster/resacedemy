@@ -1,9 +1,13 @@
 import React from "react";
+import UseMediaQuery from "../components/Mediaquery/UseMediaQuery";
 import "../styles/AboutSection.scss";
 import link_arrow from "../assets/images/aboutsection/arrow-right.png";
 import union from "../assets/images/aboutsection/union.svg";
+import mobileunion from "../assets/images/aboutsection/union.png";
 
 const AboutSection = () => {
+	let isPageMobile = UseMediaQuery("(max-width: 480px)");
+
 	return (
 		<section className="aboutus_container">
 			<div className="aboutus_wrapper">
@@ -29,7 +33,11 @@ const AboutSection = () => {
 				</div>
 
 				<div className="aboutus_right">
-					<img src={union} alt="" />
+					{isPageMobile ? (
+						<img src={mobileunion} alt="" />
+					) : (
+						<img src={union} alt="" />
+					)}
 				</div>
 			</div>
 		</section>
