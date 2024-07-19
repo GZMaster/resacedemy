@@ -12,55 +12,55 @@ import staff8 from '../images/staffimages/staff8.png';
 
 const StaffData = [
     {
+        id: 4,
+        name: 'Mr Julius Taiwo',
+        role: 'Head Teacher',
+        src: staff4
+    },
+    {
+        id: 3,
+        name: 'Mr Micheal Gabriel',
+        role: 'Admin',
+        src: staff3
+    },
+    {
+        id: 7,
+        name: 'Mr Miracle Onifade',
+        role: 'Hostel Manager',
+        src: staff7
+    },
+
+    {
         id: 1,
-        name: 'Osagie Osaghae',
-        role: 'Special Education Coordinator',
+        name: '',
+        role: '',
         src: staff1
     },
     {
         id: 2,
-        name: 'Aisha Mohammed',
-        role: 'Head Teacher',
+        name: '',
+        role: '',
         src: staff2
     },
-    {
-        id: 3,
-        name: 'Chinedu Okonkwo',
-        role: 'Occupational Therapist',
-        src: staff3
-    },
-    {
-        id: 4,
-        name: 'Ngozi Eze',
-        role: 'School Cunselor',
-        src: staff4
-    },
+
     {
         id: 5,
-        name: 'Nneka Iyamu',
-        role: 'Physical Education Coordinator',
+        name: '',
+        role: '',
         src: staff5
     },
     {
         id: 6,
-        name: 'Efe Ighodaro',
-        role: 'School Nurse',
+        name: '',
+        role: '',
         src: staff6
     },
 
-    {
-        id: 7,
-        name: 'Oluwatobi Adeyemi',
-        role: 'Hostel Manager',
-        src: staff7
-    },
-    {
-        id: 8,
-        name: 'Emeka Omoregie',
-        role: 'Speech-Language Pathologoist',
-        src: staff8
-    },
+
+
 
 ]
+
+
 
 export default StaffData;
