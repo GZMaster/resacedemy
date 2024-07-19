@@ -5,7 +5,6 @@ import staff4 from '../images/staffimages/HEADTEACHER_RESA.JPG';
 import staff5 from '../images/staffimages/GIRL1_RESA.JPG';
 import staff6 from '../images/staffimages/GIRL2_RESA.JPG';
 import staff7 from '../images/staffimages/HOSTELGUY_RESA.JPG';
-import staff8 from '../images/staffimages/staff8.png';
 
 
 
