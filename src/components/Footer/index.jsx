@@ -37,13 +37,14 @@ const Footer = () => {
 							<div className="footer_left_footer_contact">
 								<h3>Get in touch</h3>
 								<p>Contact us</p>
-								<p>spneeds@gmail.com</p>
-								<p>08023041697</p>
+								<p>roseluyischools@gmail.com</p>
+								<p>08053451385</p>
 							</div>
 							<div className="footer_left_footer_address">
 								<h3>Address</h3>
 								<p>
-									No 14, Isiuwa Street, Dausi, Benin City, Edo State, Nigeria.
+								Plot 2-12, Aibieyi - Akenzua Street, Off Uwagboe Avenue,
+								Ugbowo-Lagos Road, Benin City, EDO State
 								</p>
 							</div>
 						</div>
